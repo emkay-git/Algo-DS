@@ -8,6 +8,7 @@ public class heap
 {
     public static int array[]=new int[100];
     public static int index=0;
+    public static int min=-99999;
     public static void main(String [] arhs)
     {
      
@@ -29,6 +30,7 @@ System.out.println(array[i]);
     public static void deleteRoot()
     {
         array[0]=array[index-1];
+        array[index-1]=min;
         index-=1;
         maxHeapify();
        
